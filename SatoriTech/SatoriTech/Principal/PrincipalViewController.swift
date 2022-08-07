@@ -52,6 +52,7 @@ extension PrincipalViewController: PrincipalViewProtocol {
             takeImage = nil
             nameUser = nil
             principalTable.reloadData()
+            self.presenter?.validateSendInfo(info: ModelPhoto(photo: self.takeImage, name: self.nameUser))
             self.showAlert(message: "Exito", title: "La foto se ha subido")
         }
     }
