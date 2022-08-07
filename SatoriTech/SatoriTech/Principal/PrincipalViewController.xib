@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PrincipalViewController" customModule="SatoriTech" customModuleProvider="target">
+            <connections>
+                <outlet property="principalTable" destination="mY3-06-suC" id="7ga-pP-21b"/>
+                <outlet property="uploadPhoto" destination="nFI-o9-J5n" id="eh2-5d-RhM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mY3-06-suC">
+                    <rect key="frame" x="0.0" y="44" width="414" height="747"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFI-o9-J5n">
+                    <rect key="frame" x="20.5" y="791" width="373" height="56"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" secondItem="nFI-o9-J5n" secondAttribute="width" multiplier="0.15" id="eQZ-du-ERa"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Subir foto"/>
+                    <connections>
+                        <action selector="onClickUploadPhotoFirebase:" destination="-1" eventType="touchUpInside" id="XXt-NM-TNS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="mY3-06-suC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FFE-EU-Gqp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nFI-o9-J5n" secondAttribute="bottom" constant="15" id="Hl6-H0-zHy"/>
+                <constraint firstItem="nFI-o9-J5n" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="OXX-lr-1oM"/>
+                <constraint firstItem="nFI-o9-J5n" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bqZ-k1-RRS"/>
+                <constraint firstItem="mY3-06-suC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="k5o-hk-cag"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mY3-06-suC" secondAttribute="trailing" id="nXV-pF-g7Y"/>
+                <constraint firstItem="nFI-o9-J5n" firstAttribute="top" secondItem="mY3-06-suC" secondAttribute="bottom" id="sxI-9x-Zik"/>
+                <constraint firstItem="mY3-06-suC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yZM-7s-eoi"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="143.97321428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
